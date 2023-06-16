@@ -28,3 +28,10 @@ a {
   color: #131313;
   text-decoration: none;
 }
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  color: white;
+}

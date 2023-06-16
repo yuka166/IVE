@@ -1,14 +1,19 @@
 header {
     width: 100%;
     height: 100px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+header>nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
-    font-size: 1.2rem;
+    height: 100%;
 }
 
-header>a {
+header nav a {
     padding: 15px 30px;
     text-align: center;
     width: 100px;
@@ -16,6 +21,56 @@ header>a {
     color: white;
 }
 
+header button {
+    font-size: 1.2rem;
+}
+
 .header-logo {
-    width: 50%;
+    width: 65%;
+}
+
+@media screen and (max-width:821px) {
+    header {
+        display: flex;
+        height: 75px;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    header>a {
+        display: flex;
+        justify-content: center;
+    }
+
+    header>a,
+    header button {
+        width: 75px;
+        height: 100%;
+        z-index: 9999;
+    }
+
+    header>div {
+        background-color: rgb(255, 255, 255, 10%);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        width: 100%;
+        height: 100dvh;
+        top: 0;
+    }
+
+    header>div>nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    header>div>nav>a {
+        width: 100%;
+        padding: 20px 0;
+    }
 }
