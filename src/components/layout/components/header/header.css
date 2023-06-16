@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header>a {
+    padding: 15px 30px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    color: white;
+}
+
+.header-logo {
+    width: 50%;
+}
