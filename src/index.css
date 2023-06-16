@@ -16,6 +16,7 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  box-sizing: border-box;
 }
 
 #root {
