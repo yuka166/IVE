@@ -5,11 +5,11 @@ import DiscographyPage from "../pages/discography";
 import VideosPage from "../pages/videos";
 
 const publicRoutes = [
-    { path: '/', component: HomePage },
-    { path: '/about', component: AboutPage },
-    { path: '/members', component: MembersPage },
-    { path: '/discography', component: DiscographyPage },
-    { path: '/videos', component: VideosPage }
+    { path: '/IVE', component: HomePage },
+    { path: '/IVE/about', component: AboutPage },
+    { path: '/IVE/members', component: MembersPage },
+    { path: '/IVE/discography', component: DiscographyPage },
+    { path: '/IVE/videos', component: VideosPage }
 ]
 
 export { publicRoutes };

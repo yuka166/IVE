@@ -19,11 +19,11 @@ function Header() {
 
     return (
         <header>
-            <Link to='/about'>Giới thiệu</Link>
-            <Link to='/members'>Thành viên</Link>
-            <Link to='/'><img src={Logo} alt='Ive logo' className='header-logo' /></Link>
-            <Link to='/discography'>Discography</Link>
-            <Link to='/videos'>Video</Link>
+            <Link to='/IVE/about'>Giới thiệu</Link>
+            <Link to='/IVE/members'>Thành viên</Link>
+            <Link to='/IVE'><img src={Logo} alt='Ive logo' className='header-logo' /></Link>
+            <Link to='/IVE/discography'>Discography</Link>
+            <Link to='/IVE/videos'>Video</Link>
             {hideMenu && <div><FontAwesomeIcon icon={faBars} /></div>}
         </header>
     )
