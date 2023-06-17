@@ -1,5 +1,11 @@
 .about {
-    font-size: 1.2em;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        font-size: 1em;
+    }
 }
 
 .about h1 {
