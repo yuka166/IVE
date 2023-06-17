@@ -5,7 +5,7 @@ function Member() {
     return (
         <div className='member'>
             <div className='member-image'><img src={Image} alt='Member image' /></div>
-            <div className='member-name'>Name goes here...</div>
+            <div className='member-name'>An Yu-jin</div>
         </div>
     );
 }

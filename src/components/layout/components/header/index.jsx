@@ -19,29 +19,48 @@ function Nav(props) {
 
 function Header() {
     const [hideMenu, setHideMenu] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
+    const [displayMenu, setDisplayMenu] = useState(false);
+
     function MenuChanged() {
-        window.innerWidth < 821 ? setHideMenu(true) : setHideMenu(false)
+        window.innerWidth < 821 ? setHideMenu(true) : setHideMenu(false);
     }
-    function ShowHideMenu() {
-        showMenu ? setShowMenu(false) : setShowMenu(true);
-        const bodyTag = document.body;
-        !showMenu ? bodyTag.style.position = "fixed" : bodyTag.style.position = "static"
+
+    function HideMenu() {
+        const Navigation = document.getElementById('fullscreen-nav');
+
+        setDisplayMenu(false);
+        document.body.style.position = "static";
+        Navigation.style.display = "none";
     }
+
+    function DisplayMenu() {
+        const Navigation = document.getElementById('fullscreen-nav');
+        const NavigationLink = document.querySelectorAll('#fullscreen-nav>nav>a');
+
+        displayMenu ? setDisplayMenu(false) : setDisplayMenu(true);
+        !displayMenu ? document.body.style.position = "fixed" : document.body.style.position = "static";
+        displayMenu ? Navigation.style.display = "none" : Navigation.style.display = "block";
+
+        NavigationLink.forEach(item => {
+            item.removeEventListener('click', HideMenu)
+            item.addEventListener('click', HideMenu)
+        })
+    }
+
     useEffect(() => {
         window.addEventListener('resize', () => {
             MenuChanged();
         })
         MenuChanged();
-    }, []);
+    }, [])
 
     return (
         <header>
             {hideMenu &&
                 <>
                     <Link to='/'><img src={Logo} alt='Ive logo' className='header-logo' /></Link>
-                    <button onClick={ShowHideMenu}><FontAwesomeIcon icon={faBars} /></button>
-                    {showMenu && <div><Nav hideMenu={hideMenu} /></div>}
+                    <button onClick={DisplayMenu}><FontAwesomeIcon icon={faBars} /></button>
+                    <div id='fullscreen-nav'><Nav hideMenu={hideMenu} /></div>
                 </>
             }
             {!hideMenu && <Nav hideMenu={hideMenu} />}
