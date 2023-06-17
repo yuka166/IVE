@@ -41,3 +41,20 @@
         height: calc(100dvh - 85px);
     }
 }
+
+@media screen and (max-width:425px) {
+    .home-social>a {
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .home-social {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home-social>a {
+        margin: 10px;
+    }
+}

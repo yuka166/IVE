@@ -81,6 +81,7 @@
 
 .member-sns-newest>iframe {
     min-width: 0 !important;
+    border: 0 !important;
 }
 
 @media screen and (max-width:1024px) {
