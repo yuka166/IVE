@@ -24,7 +24,7 @@ function AboutPage() {
             <section>
                 <h2>Thành viên</h2>
                 <ul>
-                    <li>An Yu-jin</li>
+                    <li><b>An Yu-jin</b></li>
                     <li>Gaeul</li>
                     <li>Rei</li>
                     <li>Jang Wonyoung</li>
