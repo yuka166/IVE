@@ -8,7 +8,7 @@ function HomePage() {
         <div className='home'>
             <div className='home-content'>
                 <img src={Logo} alt='Ive logo' className='home-logo' />
-                <div className='home-social'>
+                <div className='social-list'>
                     <a href='https://twitter.com/IVEstarship' target='_blank' rel="noopener"><FontAwesomeIcon icon={faTwitter} /></a>
                     <a href='https://www.instagram.com/IVEstarship/' target='_blank' rel="noopener"><FontAwesomeIcon icon={faInstagram} /></a>
                     <a href='https://www.facebook.com/IVEstarship' target='_blank' rel="noopener"><FontAwesomeIcon icon={faFacebook} /></a>

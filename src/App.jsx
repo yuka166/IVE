@@ -6,7 +6,7 @@ import './App.css';
 function App() {
 
   return (
-    <div>
+    <>
       <Header />
       <Routes>
         {publicRoutes.map((route, i) => {
@@ -16,7 +16,7 @@ function App() {
           )
         })}
       </Routes>
-    </div>
+    </>
   )
 }
 

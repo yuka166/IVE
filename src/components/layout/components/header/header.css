@@ -33,6 +33,7 @@ header button {
     header {
         display: flex;
         height: 75px;
+        width: 100vw;
         align-items: center;
         justify-content: space-between;
         text-align: center;
